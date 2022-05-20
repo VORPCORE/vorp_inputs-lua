@@ -42,6 +42,6 @@ local myInput = {
 ```
 
 # Credits
-- Local9
-- C# vorp_inputs
-- converted BY Emollit
+- [Local9](https://github.com/Local9)
+- C# [vorp_inputs](https://github.com/VORPCORE/VORP-Inputs)
+- converted BY [Emollit](https://github.com/Emolitt)
