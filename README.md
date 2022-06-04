@@ -15,14 +15,14 @@ inputs for vorp framework
 local myInput = {
     type = "enableinput", -- dont touch
     inputType = "input", -- or text area for sending messages
-    button = "confirm), -- button name
-    placeholder = "insertamount, --placeholdername
+    button = "confirm", -- button name
+    placeholder = "insertamount", --placeholdername
     style = "block", --- dont touch
     attributes = {
         inputHeader = "amount", -- header
         type = "number", -- inputype text, number,date.etc if number comment out the pattern
         pattern = "[0-9]{1,20}", -- regular expression validated for only numbers "[0-9]", for letters only [A-Za-z]+   with charecter limit  [A-Za-z]{5,20}     with chareceter limit and numbers [A-Za-z0-9]{5,}
-        title = "must be nly numbers min 1 max 20, -- if input doesnt match show this message
+        title = "must be nly numbers min 1 max 20", -- if input doesnt match show this message
         style = "border-radius: 10px; background-color: ; border:none;", -- style  the inptup
     }
 }
