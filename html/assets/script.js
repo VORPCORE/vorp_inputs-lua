@@ -36,7 +36,7 @@ $(function () {
         }
       }
 
-      if (data.inputType = "textarea") {
+      if (data.inputType == "textarea") {
         $("#inpTextarea").focus();
       } else {
         $("#inputUser").focus();
