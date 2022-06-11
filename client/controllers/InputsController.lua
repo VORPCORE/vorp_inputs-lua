@@ -3,7 +3,7 @@ RegisterNetEvent('vorpinputs:getInputsWithInputType', InputsService.GetInputsWit
 RegisterNetEvent('vorpinputs:advancedInput', InputsService.OnAdvancedInput)
 
 RegisterNUICallback("submit", InputsService.SetSubmit)
-RegisterNUICallback("close", InputsService.SetClose)
+RegisterNUICallback("close", InputsService.CloseInput)
 
 RegisterCommand("closeinput", InputsService.CloseInput, false)
 
