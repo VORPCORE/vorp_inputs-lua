@@ -1,8 +1,20 @@
 InputsService = {}
 local callbackOfCurrentOpenInput = nil
 
+---@param result string
+---@private
+InputsService._callCallbackIfNotCalledAlready = function(result)
+
+    if type(callbackOfCurrentOpenInput) ~= 'function' then
+        return
+    end
+
+    callbackOfCurrentOpenInput(result)
+    callbackOfCurrentOpenInput = nil -- Don't call callback twice
+end
+
 InputsService.CloseInput = function()
-    callbackOfCurrentOpenInput = nil
+    InputsService._callCallbackIfNotCalledAlready(nil)
     SetNuiFocus(false, false)
     SendNUIMessage(NUIEvent:New({ style = "none" }))
 end
@@ -13,7 +25,7 @@ InputsService.CallCallbackAndCloseInput = function(result)
     local resultText = result.stringtext or nil
 
     if resultText ~= nil then
-        callbackOfCurrentOpenInput(resultText)
+        InputsService._callCallbackIfNotCalledAlready(resultText)
     end
 
     Wait(1)
