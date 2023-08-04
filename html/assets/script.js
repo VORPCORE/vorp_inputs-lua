@@ -66,11 +66,11 @@ $(function () {
   });
 
     //if numb pad enter is pressed reject
-  $("#inputUser, #inpTextarea").on("keydown", function (event) {
-    if (event.keyCode === 13) {
-      event.preventDefault();
-    }
-  });
+$("#inputUser, #inpTextarea").on("keydown", function (event) {
+  if (event.keyCode === 13 && event.key !== "Enter") {
+    event.preventDefault();
+  }
+});
 
   $("#formInputs").submit(function (event) {
     //event.preventDefault(); // Prevent form from submitting
